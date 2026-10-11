@@ -178,13 +178,12 @@ if (theme === 'd') {
   }));
   document.querySelectorAll('.d-category-grid article').forEach(article => {
     const product = article.querySelector('h3').textContent;
-    if (product === 'LED Sheet') {
-      const detailLink = document.createElement('a');
-      detailLink.href = 'led-sheet.html';
-      detailLink.textContent = 'View LED Sheet →';
-      detailLink.className = 'd-detail-link';
-      article.append(detailLink);
-    }
+    const productPages = {'LED Strip':'led-strip.html','COB LED Strip':'cob-led-strip.html','LED Neon Flex':'led-neon-flex.html','LED Sheet':'led-sheet.html'};
+    const detailLink = document.createElement('a');
+    detailLink.href = productPages[product];
+    detailLink.textContent = `View ${product} →`;
+    detailLink.className = 'd-detail-link';
+    article.append(detailLink);
     const link = document.createElement('a');
     link.href = '#contact';
     link.textContent = 'Enquire about this →';
