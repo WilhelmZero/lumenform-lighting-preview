@@ -178,6 +178,13 @@ if (theme === 'd') {
   }));
   document.querySelectorAll('.d-category-grid article').forEach(article => {
     const product = article.querySelector('h3').textContent;
+    if (product === 'LED Sheet') {
+      const detailLink = document.createElement('a');
+      detailLink.href = 'led-sheet.html';
+      detailLink.textContent = 'View LED Sheet →';
+      detailLink.className = 'd-detail-link';
+      article.append(detailLink);
+    }
     const link = document.createElement('a');
     link.href = '#contact';
     link.textContent = 'Enquire about this →';
@@ -187,6 +194,12 @@ if (theme === 'd') {
     });
     article.append(link);
   });
+  const requestedProduct = params.get('product');
+  const productSelect = document.querySelector('#d-enquiry-form select[name="product"]');
+  if (requestedProduct && [...productSelect.options].some(option => option.value === requestedProduct)) {
+    productSelect.value = requestedProduct;
+    if (location.hash === '#contact') requestAnimationFrame(() => document.querySelector('#contact').scrollIntoView());
+  }
   document.querySelector('#d-enquiry-form').addEventListener('submit', event => {
     event.preventDefault();
     const details = new FormData(event.currentTarget);

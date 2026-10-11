@@ -64,3 +64,5 @@ D now flows from the interactive product banner to a full-width application scen
 ## GitHub Pages preview
 
 The GitHub Actions workflow in `.github/workflows/pages.yml` publishes the `interactive` directory to GitHub Pages. The default URL opens option D; the switcher also exposes options E and F. This is a public design preview, and the enquiry form still does not send or store messages.
+
+The [LED Sheet product page](./interactive/led-sheet.html) uses five new product and application visualizations based on the supplied `sheet` image folder. [Image sources and prompt briefs](./led-sheet-assets/README.md) and full-resolution PNGs are kept in `led-sheet-assets`; the published page uses optimized WebP copies. The page links back to the D enquiry preview with LED Sheet selected.

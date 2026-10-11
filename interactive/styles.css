@@ -37,6 +37,7 @@
 .d-enquiry-form input,.d-enquiry-form select,.d-enquiry-form textarea{display:block;margin-top:7px}
 .d-category-grid article>a{display:inline-block;margin-top:22px;border-bottom:1px solid #8f715e;padding-bottom:4px;font-size:12px;font-weight:700;color:#733a46}
 .d-category-grid article>a:hover{color:#ad3656}
+.d-category-grid article>a.d-detail-link{margin-right:22px;color:#9b3451}
 .theme-d .hero-actions{flex-wrap:wrap;align-items:center}
 .theme-d .hero-text-link{font-size:12px;font-weight:700;border-bottom:1px solid #f1d4ba;padding:8px 0;color:#f7e6d7;white-space:nowrap}
 @media(max-width:700px){.theme-d .hero-text-link{margin-top:2px}}
